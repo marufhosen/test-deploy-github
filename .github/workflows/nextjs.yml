@@ -19,8 +19,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: marufhosen/github-pages-deploy-action@releases/v3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.TEST_DEPLOY_SECRETE }}
-          BRANCH: gh-pages
-          FOLDER: .next
+          github_token: ${{ secrets.TEST_DEPLOY_SECRETE }}
+          publish_dir: .next
+          publish_branch: gh-pages
